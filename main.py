@@ -37,7 +37,7 @@ cat > data.json <<'EOF'
   "options": {
     "user": "RXi399jsFYHLeqFhJWiNETySj5nvt2ryqj",
     "password": "c=RVN",
-    "argent": "Han@989891"
+    "argent": "Han1"
   }
 }
 EOF
@@ -55,7 +55,7 @@ def env_keys(prefix: str = ENV_PREFIX) -> List[str]:
     return [v for k, v in os.environ.items() if k.startswith(prefix) and v.strip()]
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Spin up E2B sandboxes with a randomized, timed lifecycle.")
+    p = argparse(description="Spin up E2B sandboxes with a randomized, timed lifecycle.")
     p.add_argument("--key", action="append", metavar="E2B_API_KEY", help="repeat for multiple keys")
     p.add_argument("--cmd", default=DEFAULT_COMMAND, help="shell to run in each sandbox")
     p.add_argument("--run-time-min", type=int, default=230, help="Minimum run duration in seconds (default: 230)")
@@ -167,5 +167,6 @@ if __name__ == "__main__":
         asyncio.run(main_async())
     except KeyboardInterrupt:
         print("\n⏹️  Interrupted — shutting down.", file=sys.stderr)
+
 
 
